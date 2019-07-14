@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -20,7 +21,7 @@ const TextBox = styled('div')`
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  padding: 0 calc((100vw - 550px) / 2) 2rem;
+  padding: 0 calc((100vw - 750px) / 2) 2rem;
   width: 100%;
 
   h1 {
@@ -55,9 +56,16 @@ const Hero = () => {
   return (
     <ImageBackground Tag='section' fluid={image.sharp.fluid} fadeIn='soft'>
       <TextBox>
-        <h1>Frontend Masters + Gatsby &hearts;</h1>
+        <h1
+          css={css`
+            text-transform: uppercase;
+          `}
+        >
+          chart drafts &hearts;
+        </h1>
         <p>
-          Hello Minnesota! <Link to='/about/'>Learn about me &rarr;</Link>
+          A site where I try out charting techniques and technologies{' '}
+          <Link to='/about/'>Learn more about the why &rarr;</Link>
         </p>
       </TextBox>
     </ImageBackground>

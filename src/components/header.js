@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import { Link } from 'gatsby';
+import React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { Link } from 'gatsby'
 
 const NavLink = styled(Link)`
   color: #222;
@@ -19,7 +19,7 @@ const NavLink = styled(Link)`
   &:last-of-type {
     margin-right: 0;
   }
-`;
+`
 
 const Header = () => (
   <header
@@ -28,28 +28,25 @@ const Header = () => (
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+      padding: 0.5rem calc((100vw - 750px - 0.5rem) / 2);
     `}
   >
-    <NavLink to="/" fontWeight="bold">
-      FEM Workshop
+    <NavLink to='/' fontWeight='bold'>
+      Blog with chart drafts
     </NavLink>
     <nav
       css={css`
         margin-top: 0;
       `}
     >
-      <NavLink to="/" activeClassName="current-page">
+      <NavLink to='/' activeClassName='current-page'>
         Home
       </NavLink>
-      <NavLink to="/about/" activeClassName="current-page">
+      <NavLink to='/about/' activeClassName='current-page'>
         About
-      </NavLink>
-      <NavLink to="/contact/" activeClassName="current-page">
-        Contact
       </NavLink>
     </nav>
   </header>
-);
+)
 
-export default Header;
+export default Header

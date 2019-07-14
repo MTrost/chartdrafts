@@ -1,11 +1,11 @@
-import React from 'react';
-import { Global, css } from '@emotion/core';
-import Helmet from 'react-helmet';
-import Header from './header';
-import useSiteMetadata from '../hooks/use-sitemetadata';
+import React from 'react'
+import { Global, css } from '@emotion/core'
+import Helmet from 'react-helmet'
+import Header from './header'
+import useSiteMetadata from '../hooks/use-sitemetadata'
 
 const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description } = useSiteMetadata()
 
   return (
     <>
@@ -61,21 +61,21 @@ const Layout = ({ children }) => {
         `}
       />
       <Helmet>
-        <html lang="en" />
+        <html lang='en' />
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name='description' content={description} />
       </Helmet>
       <Header />
       <main
         css={css`
           margin: 2rem auto;
-          max-width: 550px;
+          max-width: 750px;
         `}
       >
         {children}
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
